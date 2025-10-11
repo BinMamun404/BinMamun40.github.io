@@ -1,129 +1,180 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="bn">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BinMamun404 - Ethical Security Expert</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Bin Mamun — Web Developer & Social Media Expert</title>
+  <meta name="description" content="Bin Mamun — Web Developer & Social Media Expert | Dhaka" />
+  <link rel="stylesheet" href="style.css">
 </head>
-<body data-lang="en">
-
+<body>
+  <div class="wrap">
     <header>
-        <div class="container">
-            <div id="logo-section">
-                <img src="profile.jpg" alt="Profile Photo" class="header-photo">
-                <h1>BinMamun404</h1>
-            </div>
-            
-            <button class="menu-toggle" aria-label="Toggle Navigation">
-                <div class="bar"></div>
-                <div class="bar"></div>
-                <div class="bar"></div>
-            </button>
-
-            <nav id="main-nav">
-                <ul>
-                    <li><a href="#myself" data-en="My Self" data-bn="আমি" data-hi="मैं">My Self</a></li>
-                    <li><a href="#what-i-do" data-en="What Can I Do" data-bn="আমি কী করতে পারি" data-hi="मैं क्या कर सकता हूँ">What Can I Do</a></li>
-                    <li><a href="#about-us" data-en="About Us" data-bn="আমাদের দল" data-hi="हमारे बारे में">About Us</a></li>
-                    <li><a href="#contact" data-en="Contact" data-bn="যোগাযোগ" data-hi="संपर्क">Contact</a></li>
-                    <li class="dropdown">
-                        <span class="dropbtn" data-en="Language" data-bn="ভাষা" data-hi="भाषा">Language</span>
-                        <div class="dropdown-content">
-                            <button onclick="setLanguage('en')">English</button>
-                            <button onclick="setLanguage('bn')">বাংলা</button>
-                            <button onclick="setLanguage('hi')">हिन्दी</button>
-                        </div>
-                    </li>
-                    <li><a href="#help" data-en="Help" data-bn="সহায়তা" data-hi="मदद">Help</a></li>
-                    <li><a href="#support" data-en="Support" data-bn="সহযোগিতা" data-hi="सहयोग">Support</a></li>
-                </ul>
-            </nav>
+      <div class="leftbar">
+        <div class="hamb" id="hamb" title="মেনু (টিপ: ক্লিক করে দেখুন)">
+          <div></div><div></div><div></div>
         </div>
+
+        <div class="brand">
+          <div class="logo" id="logo">BM</div>
+          <div class="title">
+            <h1>Bin Mamun</h1>
+            <p class="muted">Web Developer & Social Media Expert — Dhaka</p>
+          </div>
+        </div>
+      </div>
+
+      <nav>
+        <button class="navbtn" onclick="scrollToSection('about')">About</button>
+        <button class="navbtn" onclick="scrollToSection('what')">What I Can Do</button>
+        <button class="navbtn" onclick="scrollToSection('contact')">Contact</button>
+      </nav>
     </header>
 
-    <main>
-        <section id="myself" class="hero">
-            <div class="container">
-                <img src="my-photo.jpg" alt="Mamun's Photo" class="section-photo">
-                <h2 data-en="Hi! My name is Mamun" data-bn="হাই! আমার নাম মামুন" data-hi="नमस्ते! मेरा नाम मामून है">Hi! My name is Mamun</h2>
-                <p data-en="I am an Ethical Hacking & Social Media Expert. I am dedicated to protecting digital assets and enhancing online security." data-bn="আমি একজন নৈতিক হ্যাকিং এবং সোশ্যাল মিডিয়া বিশেষজ্ঞ। আমি ডিজিটাল সম্পদ সুরক্ষা এবং অনলাইন নিরাপত্তা বাড়াতে নিবেদিত।" data-hi="मैं एक एथिकल हैकिंग और सोशल मीडिया विशेषज्ञ हूँ। मैं डिजिटल संपत्तियों की सुरक्षा और ऑनलाइन सुरक्षा बढ़ाने के लिए समर्पित हूँ।">I am an Ethical Hacking & Social Media Expert. I am dedicated to protecting digital assets and enhancing online security.</p>
-                <a href="#contact" class="btn" data-en="Get in Touch" data-bn="যোগাযোগ করুন" data-hi="संपर्क करें">Get in Touch</a>
+    <!-- side floating panel (hamburger) -->
+    <div class="sidepanel" id="panel" aria-hidden="true">
+      <h4>Quick Menu</h4>
+
+      <div class="menuItem" onclick="scrollToSection('about')">
+        <div>About Me</div><div class="muted">সংক্ষেপে</div>
+      </div>
+
+      <div class="menuItem" onclick="scrollToSection('what')">
+        <div>What I Can Do</div><div class="muted">সেবাসমূহ</div>
+      </div>
+
+      <div class="menuItem" onclick="scrollToSection('contact')">
+        <div>Contact</div><div class="muted">যোগাযোগ</div>
+      </div>
+
+      <div style="height:8px"></div>
+      <div class="tip"><strong>টিপ:</strong> Contact এ মেসেজ দিলে এটি তোমার ইমেইলে যাবে অথবা কপি করে Telegram-এ পাঠাতে পারো।</div>
+      <div class="tip" style="margin-top:6px"><strong>টিপ:</strong> Telegram আইকনে ক্লিক করলে @binmamun খুলবে।</div>
+    </div>
+
+    <main class="grid">
+      <!-- left column -->
+      <aside>
+        <div class="card">
+          <div class="photo">
+            <div style="text-align:center">
+              <div style="font-size:42px; font-weight:800; color:var(--accent)">BM</div>
+              <div class="muted" style="margin-top:6px">Bin Mamun</div>
             </div>
-        </section>
+          </div>
 
-        <section id="what-i-do" class="skills">
-            <div class="container">
-                <h2 data-en="What Can I Do" data-bn="আমি কী করতে পারি" data-hi="मैं क्या कर सकता हूँ">What Can I Do</h2>
-                <div class="skill-list">
-                    <div class="skill-item" data-en="Ethical Hacking & Penetration Testing" data-bn="নৈতিক হ্যাকিং ও অনুপ্রবেশ পরীক্ষা" data-hi="एथिकल हैकिंग और प्रवेश परीक्षण">Ethical Hacking & Penetration Testing</div>
-                    <div class="skill-item" data-en="Social Media Account Recovery" data-bn="সোশ্যাল মিডিয়া অ্যাকাউন্ট পুনরুদ্ধার" data-hi="सोशल मीडिया खाता वसूली">Social Media Account Recovery</div>
-                    <div class="skill-item" data-en="Cyber Security Consultation" data-bn="সাইবার নিরাপত্তা পরামর্শ" data-hi="साइबर सुरक्षा परामर्श">Cyber Security Consultation</div>
-                    <div class="skill-item" data-en="Data Forensics" data-bn="ডেটা ফরেনসিকস" data-hi="डेटा फोरेंसिक">Data Forensics</div>
-                    <div class="skill-item" data-en="Advanced System Analysis" data-bn="উন্নত সিস্টেম বিশ্লেষণ" data-hi="उन्नत सिस्टम विश्लेषण">Advanced System Analysis</div>
-                </div>
+          <div class="info">
+            <h3>Bin Mamun</h3>
+            <p class="muted">Web Developer • Social Media Expert</p>
+
+            <div class="skills" aria-hidden="false">
+              <div class="skill">Web Deployment</div>
+              <div class="skill">Social Media</div>
+              <div class="skill">UI/UX</div>
+              <div class="skill">SEO</div>
+              <div class="skill">Branding</div>
             </div>
-        </section>
 
-        <section id="about-us" class="team-section">
-            <div class="container">
-                <h2 data-en="About Our Team" data-bn="আমাদের দল সম্পর্কে" data-hi="हमारी टीम के बारे में">About Our Team</h2>
-                <p data-en="We are a dedicated team of security experts ready to assist you. Our specialists provide quick and reliable support for all your digital security needs." data-bn="আমরা নিরাপত্তা বিশেষজ্ঞদের একটি নিবেদিত দল, যারা আপনাকে সাহায্য করতে প্রস্তুত। আমাদের বিশেষজ্ঞরা আপনার সব ডিজিটাল নিরাপত্তা প্রয়োজনের জন্য দ্রুত এবং নির্ভরযোগ্য সহায়তা প্রদান করেন।" data-hi="हम सुरक्षा विशेषज्ञों की एक समर्पित टीम हैं, जो आपकी सहायता के लिए तैयार हैं। हमारे विशेषज्ञ आपकी सभी डिजिटल सुरक्षा आवश्यकताओं के लिए त्वरित और विश्वसनीय समर्थन प्रदान करते हैं।">We are a dedicated team of security experts ready to assist you. Our specialists provide quick and reliable support for all your digital security needs.</p>
-                <div class="team-photo">
-                    <img src="team-photo.png" alt="Team Photo" class="section-photo">
-                </div>
-                <a href="https://t.me/your_telegram_id" target="_blank" class="btn telegram-btn">
-                    <i class="fab fa-telegram-plane"></i> <span data-en="Join Our Telegram" data-bn="আমাদের টেলিগ্রামে যোগ দিন" data-hi="हमारे टेलीग्राम से जुड़ें">Join Our Telegram</span>
-                </a>
+            <div style="margin-top:12px">
+              <div class="muted">ইমেইল</div>
+              <div style="margin-top:6px"><a href="mailto:zenomamun@proton.me" class="iconBtn"><span>✉️</span> zenomamun@proton.me</a></div>
+              <div style="margin-top:10px">
+                <button class="iconBtn tg" onclick="openTelegram()" title="Telegram খুলুন">Telegram: @binmamun</button>
+                <button class="iconBtn copy" onclick="copyToClipboard('zenomamun@proton.me')" title="ইমেইল কপি করুন">Copy Email</button>
+              </div>
             </div>
-        </section>
-
-        <section id="contact" class="contact-section">
-            <div class="container">
-                <h2 data-en="Contact Details" data-bn="যোগাযোগের ঠিকানা" data-hi="संपर्क विवरण">Contact Details</h2>
-                <p data-en="You can reach me via email or Telegram." data-bn="আপনি ইমেইল বা টেলিগ্রামের মাধ্যমে আমার সাথে যোগাযোগ করতে পারেন।" data-hi="आप मुझे ईमेल या टेलीग्राम के माध्यम से संपर्क कर सकते हैं।">You can reach me via email or Telegram.</p>
-                <p data-en="Email: Your_Email@example.com" data-bn="ইমেইল: Your_Email@example.com" data-hi="ईमेल: Your_Email@example.com">Email: Your_Email@example.com</p>
-                <p data-en="Telegram ID: @Your_Telegram_ID" data-bn="টেলিগ্রাম আইডি: @Your_Telegram_ID" data-hi="टेलीग्राम आईडी: @Your_Telegram_ID">Telegram ID: @Your_Telegram_ID</p>
-            </div>
-        </section>
-
-        <section id="help" class="help-section">
-            <div class="container">
-                <h2 data-en="How We Can Help" data-bn="আমরা কীভাবে সাহায্য করতে পারি" data-hi="हम कैसे मदद कर सकते हैं">How We Can Help</h2>
-                <img src="help-photo.jpg" alt="Help Photo" class="section-photo">
-                <p data-en="We provide comprehensive digital assistance, from recovering lost accounts to securing your network. Let us know your challenge, and we will devise a professional solution." data-bn="আমরা হারিয়ে যাওয়া অ্যাকাউন্ট পুনরুদ্ধার থেকে শুরু করে আপনার নেটওয়ার্ক সুরক্ষিত করা পর্যন্ত ব্যাপক ডিজিটাল সহায়তা প্রদান করি। আপনার চ্যালেঞ্জটি আমাদের জানান, এবং আমরা একটি পেশাদার সমাধান তৈরি করব।" data-hi="हम खोए हुए खातों को पुनर्प्राप्त करने से लेकर आपके नेटवर्क को सुरक्षित करने तक, व्यापक डिजिटल सहायता प्रदान करते हैं। हमें अपनी चुनौती बताएं, और हम एक पेशेवर समाधान तैयार करेंगे।">We provide comprehensive digital assistance, from recovering lost accounts to securing your network. Let us know your challenge, and we will devise a professional solution.</p>
-                <p data-en="For immediate support, email us at:" data-bn="তাৎক্ষণিক সহায়তার জন্য, আমাদের এই ইমেইল করুন:" data-hi="त्वरित समर्थन के लिए, हमें ईमेल करें:">For immediate support, email us at:</p>
-                <p><a href="mailto:Your_Email@example.com">Your_Email@example.com</a></p>
-            </div>
-        </section>
-        
-        <section id="support" class="support-section">
-            <div class="container">
-                <h2 data-en="Support Request Form" data-bn="সহযোগিতার অনুরোধ ফর্ম" data-hi="सहयोग अनुरोध फ़ॉर्म">Support Request Form</h2>
-                <form action="YOUR_FORM_SUBMISSION_URL" method="POST">
-                    <label for="name" data-en="Your Name" data-bn="আপনার নাম" data-hi="आपका नाम">Your Name</label>
-                    <input type="text" id="name" name="name" required>
-
-                    <label for="email" data-en="Your Email" data-bn="আপনার ইমেইল" data-hi="आपका ईमेल">Your Email</label>
-                    <input type="email" id="email" name="email" required>
-
-                    <label for="issue" data-en="Describe Your Issue" data-bn="আপনার সমস্যা বর্ণনা করুন" data-hi="अपनी समस्या का वर्णन करें">Describe Your Issue</label>
-                    <textarea id="issue" name="issue" rows="5" required></textarea>
-
-                    <button type="submit" class="btn" data-en="Submit Request" data-bn="অনুরোধ জমা দিন" data-hi="अनुरोध सबमिट करें">Submit Request</button>
-                    <p class="form-note" data-en="Note: This form is a visual element only. It requires a backend service to actually send data." data-bn="দ্রষ্টব্য: এই ফর্মটি কেবল একটি ভিজ্যুয়াল উপাদান। ডেটা প্রেরণের জন্য একটি ব্যাকএন্ড পরিষেবার প্রয়োজন।" data-hi="ध्यान दें: यह फ़ॉर्म केवल एक दृश्य तत्व है। डेटा भेजने के लिए एक बैकएंड सेवा की आवश्यकता है।">Note: This form is a visual element only. It requires a backend service to actually send data.</p>
-                </form>
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        <div class="container">
-            <p>&copy; 2025 BinMamun404. All Rights Reserved.</p>
+          </div>
         </div>
-    </footer>
-    
-    <script src="script.js"></script>
+
+        <div style="height:12px"></div>
+
+        <div class="card">
+          <h4 class="sectionTitle">Quick Contact Tips</h4>
+          <div class="muted" style="font-size:13px; line-height:1.6">
+            • Contact পাঠালে প্রথমে সালাম দিয়ে পরিচয় লিখো।<br>
+            • কাজের ধরন ও বাজেট সংক্ষেপে লিখলে দ্রুত রেসপন্স পাবো।<br>
+            • যদি দ্রুত দরকার হয়, Telegram-এ মেসেজ করো (@binmamun)।
+          </div>
+        </div>
+      </aside>
+
+      <!-- right column -->
+      <section>
+        <div class="card hero">
+          <div>
+            <div class="headline">হাই — আমি <strong>Bin Mamun</strong>. <span class="typed" id="typed">Web Developer & Social Media Expert</span></div>
+            <p class="summary" id="summary">আমি ওয়েব ডেভেলপমেন্ট ও ডিজিটাল মার্কেটিং মিলে প্রফেশনাল পরিষেবা দিই। ওয়েবসাইট ডিপ্লয়, ব্র্যান্ডিং, সোশ্যাল মিডিয়া স্ট্র্যাটেজি এবং SEO-অপটিমাইজেশন এ অভিজ্ঞ। তোমার আইডিয়া যদি থাকে, আমি সেটাকে প্রোডাক্টে পরিণত করতে পারি।</p>
+
+            <div class="cta">
+              <button class="btn primary" onclick="scrollToSection('contact')">Contact করে দেখো</button>
+              <button class="btn outline" onclick="downloadCV()">CV ডাউনলোড</button>
+            </div>
+
+            <div class="gridCards">
+              <div class="smallCard">
+                <strong>প্রধান দক্ষতা</strong>
+                <p class="muted">Web Deployment, Responsive Design, Social Media Strategy</p>
+              </div>
+              <div class="smallCard">
+                <strong>উপলব্ধি</strong>
+                <p class="muted">Freelance & Remote Projects • Client-focused • Timely Delivery</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- About -->
+          <div class="sections" id="about">
+            <h3 class="sectionTitle">About Me</h3>
+            <p class="muted">আমি Bin Mamun — ওয়েব ডেভেলপার এবং সোশ্যাল মিডিয়া এক্সপার্ট। ছোট থেকে বড় প্রকল্পে কাজ করেছি: ব্যক্তিগত পোর্টফোলিও, ব্যবসায়িক ল্যান্ডিং পেজ, এবং সোশ্যাল ক্যাম্পেইন। আমার কাজের মূল লক্ষ্য: ব্যবহারকারীর জন্য পরিষ্কার, দ্রুত ও ফলপ্রসূ অভিজ্ঞতা তৈরি করা।</p>
+          </div>
+
+          <!-- What I Can Do -->
+          <div class="sections" id="what">
+            <h3 class="sectionTitle">What I Can Do (আমি কী করতে পারি)</h3>
+            <div class="timeline">
+              <div class="item"><strong>Web Deployment</strong><div class="muted">Hosting, GitHub Pages / Netlify / Vercel এ ডিপ্লয়</div></div>
+              <div class="item"><strong>Responsive UI/UX</strong><div class="muted">Mobile-first ডিজাইন, দ্রুত লোডিং</div></div>
+              <div class="item"><strong>Social Media Strategy</strong><div class="muted">Instagram/Facebook growth, content plan, ad setup</div></div>
+              <div class="item"><strong>SEO & Performance</strong><div class="muted">On-page SEO, speed optimization, metadata</div></div>
+              <div class="item"><strong>Branding & Graphics</strong><div class="muted">Logo, cover images, social templates</div></div>
+              <div class="item"><strong>Contact & Support</strong><div class="muted">Project planning, suggestions, quick support via Telegram</div></div>
+            </div>
+          </div>
+
+          <!-- Contact -->
+          <div class="sections" id="contact">
+            <h3 class="sectionTitle">Contact / যোগাযোগ</h3>
+            <p class="muted">নিচের ফর্ম পূরণ করলে আমি সরাসরি তোমার ইমেইলে বা Telegram-এ রেসপন্স দেব (server নেই — ইমেইল/কপি বেসড)।</p>
+
+            <div style="margin-top:10px">
+              <div style="display:flex; gap:8px; margin-bottom:8px">
+                <input id="name" placeholder="নাম" />
+                <input id="subject" placeholder="বিষয় (যদি থাকে)" />
+              </div>
+              <textarea id="message" placeholder="সংক্ষিপ্ত বার্তা লিখুন... (পাঠাতে হলে Project বর্ণনা ও বাজেট লিখুন)"></textarea>
+
+              <div style="display:flex; gap:8px; margin-top:8px; align-items:center">
+                <button class="btn primary" onclick="sendContact()">Send (ইমেইল খুলবে)</button>
+                <button class="btn outline" onclick="copyMessage()">Copy Message</button>
+                <div id="status" class="muted" style="font-size:13px"></div>
+              </div>
+
+              <div class="socials" style="margin-top:12px">
+                <button class="iconBtn tg" onclick="openTelegram()" title="Telegram @binmamun">Telegram • @binmamun</button>
+                <a class="iconBtn" href="mailto:zenomamun@proton.me">Email • zenomamun@proton.me</a>
+              </div>
+            </div>
+          </div>
+
+          <footer>
+            <div>© <span id="year"></span> <strong>Bin Mamun</strong></div>
+            <div class="muted">Built smart • Professional • Fast</div>
+          </footer>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
