@@ -6,6 +6,7 @@
   <title>Bin Mamun — Web Developer & Social Media Expert</title>
   <meta name="description" content="Bin Mamun — Web Developer & Social Media Expert | Dhaka" />
   <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
 </head>
 <body>
   <div class="wrap">
@@ -16,7 +17,7 @@
         </div>
 
         <div class="brand">
-          <div class="logo" id="logo">BM</div>
+          <div class="logo" id="logo">Me?</div>
           <div class="title">
             <h1>Bin Mamun</h1>
             <p class="muted">Web Developer & Social Media Expert — Dhaka</p>
@@ -26,12 +27,11 @@
 
       <nav>
         <button class="navbtn" onclick="scrollToSection('about')">About</button>
-        <button class="navbtn" onclick="scrollToSection('what')">What I Can Do</button>
+        <button class="navbtn" onclick="scrollToSection('what')">Skills</button>
         <button class="navbtn" onclick="scrollToSection('contact')">Contact</button>
       </nav>
     </header>
 
-    <!-- side floating panel (hamburger) -->
     <div class="sidepanel" id="panel" aria-hidden="true">
       <h4>Quick Menu</h4>
 
@@ -40,7 +40,7 @@
       </div>
 
       <div class="menuItem" onclick="scrollToSection('what')">
-        <div>What I Can Do</div><div class="muted">সেবাসমূহ</div>
+        <div>Skills & Services</div><div class="muted">সেবাসমূহ</div>
       </div>
 
       <div class="menuItem" onclick="scrollToSection('contact')">
@@ -49,38 +49,37 @@
 
       <div style="height:8px"></div>
       <div class="tip"><strong>টিপ:</strong> Contact এ মেসেজ দিলে এটি তোমার ইমেইলে যাবে অথবা কপি করে Telegram-এ পাঠাতে পারো।</div>
-      <div class="tip" style="margin-top:6px"><strong>টিপ:</strong> Telegram আইকনে ক্লিক করলে @binmamun খুলবে।</div>
     </div>
 
     <main class="grid">
-      <!-- left column -->
       <aside>
         <div class="card">
           <div class="photo">
             <div style="text-align:center">
-              <div style="font-size:42px; font-weight:800; color:var(--accent)">BM</div>
-              <div class="muted" style="margin-top:6px">Bin Mamun</div>
+              <div class="initials-circle">Me?</div>
+              <div class="muted" style="margin-top:8px; font-weight:600">Bin Mamun</div>
+              <p class="muted" style="font-size:14px; margin-top:2px;">Dhaka, Bangladesh</p>
             </div>
           </div>
 
           <div class="info">
-            <h3>Bin Mamun</h3>
-            <p class="muted">Web Developer • Social Media Expert</p>
+            <h3>Key Expertise</h3>
+            <p class="muted" style="margin-bottom:15px">Web Developer • Social Media Expert</p>
 
-            <div class="skills" aria-hidden="false">
+            <div class="skills">
+              <div class="skill">Frontend Dev</div>
               <div class="skill">Web Deployment</div>
-              <div class="skill">Social Media</div>
-              <div class="skill">UI/UX</div>
-              <div class="skill">SEO</div>
-              <div class="skill">Branding</div>
+              <div class="skill">Social Media Strategy</div>
+              <div class="skill">UI/UX Design</div>
+              <div class="skill">SEO Optimization</div>
+              <div class="skill">Branding & Graphics</div>
             </div>
 
-            <div style="margin-top:12px">
-              <div class="muted">ইমেইল</div>
-              <div style="margin-top:6px"><a href="mailto:zenomamun@proton.me" class="iconBtn"><span>✉️</span> zenomamun@proton.me</a></div>
-              <div style="margin-top:10px">
-                <button class="iconBtn tg" onclick="openTelegram()" title="Telegram খুলুন">Telegram: @binmamun</button>
-                <button class="iconBtn copy" onclick="copyToClipboard('zenomamun@proton.me')" title="ইমেইল কপি করুন">Copy Email</button>
+            <div style="margin-top:20px">
+              <div class="muted">zenomamun@proton.me</div>
+              <div style="margin-top:15px; display:flex; gap: 8px;">
+                <button class="btn primary small-btn" onclick="openTelegram()" title="Telegram খুলুন"><span>✈️</span> Telegram</button>
+                <button class="btn outline small-btn" onclick="copyToClipboard('zenomamun@proton.me')" title="ইমেইল কপি করুন"><span>📄</span> Copy Email</button>
               </div>
             </div>
           </div>
@@ -91,84 +90,103 @@
         <div class="card">
           <h4 class="sectionTitle">Quick Contact Tips</h4>
           <div class="muted" style="font-size:13px; line-height:1.6">
-            • Contact পাঠালে প্রথমে সালাম দিয়ে পরিচয় লিখো।<br>
-            • কাজের ধরন ও বাজেট সংক্ষেপে লিখলে দ্রুত রেসপন্স পাবো।<br>
-            • যদি দ্রুত দরকার হয়, Telegram-এ মেসেজ করো (@binmamun)।
+            • Please start with an introduction and a brief greeting.<br>
+            • To get a quick response, briefly mention the **project type** and **budget**.<br>
+            • For urgent matters, send a message on **Telegram**.
           </div>
         </div>
       </aside>
 
-      <!-- right column -->
       <section>
         <div class="card hero">
           <div>
-            <div class="headline">হাই — আমি <strong>Bin Mamun</strong>. <span class="typed" id="typed">Web Developer & Social Media Expert</span></div>
-            <p class="summary" id="summary">আমি ওয়েব ডেভেলপমেন্ট ও ডিজিটাল মার্কেটিং মিলে প্রফেশনাল পরিষেবা দিই। ওয়েবসাইট ডিপ্লয়, ব্র্যান্ডিং, সোশ্যাল মিডিয়া স্ট্র্যাটেজি এবং SEO-অপটিমাইজেশন এ অভিজ্ঞ। তোমার আইডিয়া যদি থাকে, আমি সেটাকে প্রোডাক্টে পরিণত করতে পারি।</p>
+            <div class="headline">Hello! I'm <strong>Bin Mamun</strong>. <span class="typed" id="typed"></span></div>
+            <p class="summary" id="summary">I offer professional services in **Web Development** and **Digital Marketing**. I specialize in website deployment, responsive design, social media strategy, and SEO optimization. Got an idea? I can turn it into a functional product.</p>
 
             <div class="cta">
-              <button class="btn primary" onclick="scrollToSection('contact')">Contact করে দেখো</button>
-              <button class="btn outline" onclick="downloadCV()">CV ডাউনলোড</button>
+              <button class="btn primary" onclick="scrollToSection('contact')">Let's Talk Business</button>
+              <button class="btn outline" onclick="downloadCV()">Download CV</button>
             </div>
 
             <div class="gridCards">
               <div class="smallCard">
-                <strong>প্রধান দক্ষতা</strong>
-                <p class="muted">Web Deployment, Responsive Design, Social Media Strategy</p>
+                <strong>Core Focus</strong>
+                <p class="muted">Clean Code • User Experience • Goal-Oriented Results</p>
               </div>
               <div class="smallCard">
-                <strong>উপলব্ধি</strong>
+                <strong>Availability</strong>
                 <p class="muted">Freelance & Remote Projects • Client-focused • Timely Delivery</p>
               </div>
             </div>
           </div>
 
-          <!-- About -->
           <div class="sections" id="about">
             <h3 class="sectionTitle">About Me</h3>
-            <p class="muted">আমি Bin Mamun — ওয়েব ডেভেলপার এবং সোশ্যাল মিডিয়া এক্সপার্ট। ছোট থেকে বড় প্রকল্পে কাজ করেছি: ব্যক্তিগত পোর্টফোলিও, ব্যবসায়িক ল্যান্ডিং পেজ, এবং সোশ্যাল ক্যাম্পেইন। আমার কাজের মূল লক্ষ্য: ব্যবহারকারীর জন্য পরিষ্কার, দ্রুত ও ফলপ্রসূ অভিজ্ঞতা তৈরি করা।</p>
+            <p class="muted">আমি Bin Mamun — একজন ওয়েব ডেভেলপার এবং সোশ্যাল মিডিয়া এক্সপার্ট। আমি ব্যক্তিগত পোর্টফোলিও থেকে শুরু করে ব্যবসায়িক ল্যান্ডিং পেজ এবং পূর্ণাঙ্গ সোশ্যাল মিডিয়া ক্যাম্পেইন নিয়ে কাজ করেছি। আমার কাজের মূল লক্ষ্য: **ব্যবহারকারীর জন্য পরিষ্কার, দ্রুত, এবং ব্যবসায়িক ফলপ্রসূ অভিজ্ঞতা তৈরি করা।**</p>
           </div>
 
-          <!-- What I Can Do -->
           <div class="sections" id="what">
-            <h3 class="sectionTitle">What I Can Do (আমি কী করতে পারি)</h3>
-            <div class="timeline">
-              <div class="item"><strong>Web Deployment</strong><div class="muted">Hosting, GitHub Pages / Netlify / Vercel এ ডিপ্লয়</div></div>
-              <div class="item"><strong>Responsive UI/UX</strong><div class="muted">Mobile-first ডিজাইন, দ্রুত লোডিং</div></div>
-              <div class="item"><strong>Social Media Strategy</strong><div class="muted">Instagram/Facebook growth, content plan, ad setup</div></div>
-              <div class="item"><strong>SEO & Performance</strong><div class="muted">On-page SEO, speed optimization, metadata</div></div>
-              <div class="item"><strong>Branding & Graphics</strong><div class="muted">Logo, cover images, social templates</div></div>
-              <div class="item"><strong>Contact & Support</strong><div class="muted">Project planning, suggestions, quick support via Telegram</div></div>
+            <h3 class="sectionTitle">What I Can Do (Skills & Services)</h3>
+            
+            <div class="compact-timeline">
+                <div class="service-box">
+                    <strong>Web Deployment & Hosting</strong>
+                    <div class="muted">Deploying websites on platforms like GitHub Pages, Netlify, or Vercel. Handling domain & hosting setup.</div>
+                </div>
+                <div class="service-box">
+                    <strong>Responsive UI/UX Design</strong>
+                    <div class="muted">Designing **mobile-first**, user-friendly interfaces (UI) and ensuring a great user experience (UX) with fast loading times.</div>
+                </div>
+                <div class="service-box">
+                    <strong>Social Media Strategy</strong>
+                    <div class="muted">Developing growth strategies for platforms like Instagram/Facebook, content planning, and managing targeted ad setup.</div>
+                </div>
+                <div class="service-box">
+                    <strong>SEO & Performance</strong>
+                    <div class="muted">Improving site visibility with On-page SEO, increasing speed through optimization, and managing proper metadata.</div>
+                </div>
+                <div class="service-box">
+                    <strong>Branding & Graphics</strong>
+                    <div class="muted">Creating essential brand elements like logos, cover images, and social media post templates to ensure consistency.</div>
+                </div>
+                <div class="service-box">
+                    <strong>Project Planning & Support</strong>
+                    <div class="muted">Providing project planning, suggestions, and quick support via Telegram for timely and efficient collaboration.</div>
+                </div>
             </div>
           </div>
 
-          <!-- Contact -->
           <div class="sections" id="contact">
             <h3 class="sectionTitle">Contact / যোগাযোগ</h3>
-            <p class="muted">নিচের ফর্ম পূরণ করলে আমি সরাসরি তোমার ইমেইলে বা Telegram-এ রেসপন্স দেব (server নেই — ইমেইল/কপি বেসড)।</p>
+            <p class="muted">This is an email/copy-based form. Fill it out and click 'Send' to open your email client, or 'Copy' to paste the message into Telegram.</p>
 
             <div style="margin-top:10px">
               <div style="display:flex; gap:8px; margin-bottom:8px">
-                <input id="name" placeholder="নাম" />
-                <input id="subject" placeholder="বিষয় (যদি থাকে)" />
+                <input id="name" placeholder="Name" />
+                <input id="subject" placeholder="Subject (Optional)" />
               </div>
-              <textarea id="message" placeholder="সংক্ষিপ্ত বার্তা লিখুন... (পাঠাতে হলে Project বর্ণনা ও বাজেট লিখুন)"></textarea>
+              <textarea id="message" placeholder="Write your brief message here... (Please include project description and budget to get a faster response)"></textarea>
 
-              <div style="display:flex; gap:8px; margin-top:8px; align-items:center">
-                <button class="btn primary" onclick="sendContact()">Send (ইমেইল খুলবে)</button>
+              <div style="display:flex; gap:8px; margin-top:12px; align-items:center">
+                <button class="btn primary" onclick="sendContact()">Send via Email</button>
                 <button class="btn outline" onclick="copyMessage()">Copy Message</button>
                 <div id="status" class="muted" style="font-size:13px"></div>
               </div>
 
-              <div class="socials" style="margin-top:12px">
-                <button class="iconBtn tg" onclick="openTelegram()" title="Telegram @binmamun">Telegram • @binmamun</button>
-                <a class="iconBtn" href="mailto:zenomamun@proton.me">Email • zenomamun@proton.me</a>
+              <div class="socials" style="margin-top:15px; border-top: 1px solid rgba(255,255,255,0.06); padding-top: 15px;">
+                <button class="iconBtn tg" onclick="openTelegram()" title="Go to Telegram: @binmamun">
+                    <span style="font-size: 1.1em;">✈️</span> Telegram
+                </button>
+                <a class="iconBtn" href="mailto:zenomamun@proton.me" title="Send Email to zenomamun@proton.me">
+                    <span style="font-size: 1.1em;">✉️</span> Email
+                </a>
               </div>
             </div>
           </div>
 
           <footer>
             <div>© <span id="year"></span> <strong>Bin Mamun</strong></div>
-            <div class="muted">Built smart • Professional • Fast</div>
+            <div class="muted">Built with HTML, CSS, JS • Professional • Fast</div>
           </footer>
         </div>
       </section>
